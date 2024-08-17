@@ -1,0 +1,245 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --m-3white: rgba(255, 255, 255, 1);
+  --m3-body-large-font-family: "Roboto", Helvetica;
+  --m3-body-large-font-size: 16px;
+  --m3-body-large-font-style: normal;
+  --m3-body-large-font-weight: 400;
+  --m3-body-large-letter-spacing: 0.5px;
+  --m3-body-large-line-height: 24px;
+  --m3-body-medium-font-family: "Roboto", Helvetica;
+  --m3-body-medium-font-size: 14px;
+  --m3-body-medium-font-style: normal;
+  --m3-body-medium-font-weight: 400;
+  --m3-body-medium-letter-spacing: 0.25px;
+  --m3-body-medium-line-height: 20px;
+  --m3-elevation-light-1: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  --m3-elevation-light-3: 0px 1px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgba(0, 0, 0, 0.15);
+  --m3-elevation-light-4: 0px 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 6px 10px 4px rgba(0, 0, 0, 0.15);
+  --m3-headline-medium-font-family: "Roboto", Helvetica;
+  --m3-headline-medium-font-size: 28px;
+  --m3-headline-medium-font-style: normal;
+  --m3-headline-medium-font-weight: 400;
+  --m3-headline-medium-letter-spacing: 0px;
+  --m3-headline-medium-line-height: 36px;
+  --m3-label-large-font-family: "Roboto", Helvetica;
+  --m3-label-large-font-size: 14px;
+  --m3-label-large-font-style: normal;
+  --m3-label-large-font-weight: 500;
+  --m3-label-large-letter-spacing: 0.10000000149011612px;
+  --m3-label-large-line-height: 20px;
+  --m3-label-medium-font-family: "Roboto", Helvetica;
+  --m3-label-medium-font-size: 12px;
+  --m3-label-medium-font-style: normal;
+  --m3-label-medium-font-weight: 500;
+  --m3-label-medium-letter-spacing: 0.5px;
+  --m3-label-medium-line-height: 16px;
+  --m3-label-medium-prominent-font-family: "Roboto", Helvetica;
+  --m3-label-medium-prominent-font-size: 12px;
+  --m3-label-medium-prominent-font-style: normal;
+  --m3-label-medium-prominent-font-weight: 600;
+  --m3-label-medium-prominent-letter-spacing: 0.5px;
+  --m3-label-medium-prominent-line-height: 16px;
+  --m3-schemes-on-surface: rgba(29, 27, 32, 1);
+  --m3-schemes-on-surface-variant: rgba(73, 69, 79, 1);
+  --m3-schemes-outline-variant: rgba(202, 196, 208, 1);
+  --m3-schemes-primary: rgba(101, 85, 143, 1);
+  --m3-schemes-surface: rgba(254, 247, 255, 1);
+  --m3-schemes-surface-container-highest: rgba(230, 224, 233, 1);
+  --m3-schemes-surface-container-lowest: rgba(255, 255, 255, 1);
+  --m3-schemes-tertiary-container: rgba(255, 216, 228, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(255, 255, 255, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(255, 255, 255, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(29, 25, 43, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(29, 27, 32, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(29, 27, 32, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(73, 69, 79, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(73, 69, 79, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(49, 17, 29, 0.08);
+  --m3-title-large-font-family: "Roboto", Helvetica;
+  --m3-title-large-font-size: 22px;
+  --m3-title-large-font-style: normal;
+  --m3-title-large-font-weight: 400;
+  --m3-title-large-letter-spacing: 0px;
+  --m3-title-large-line-height: 28px;
+  --m3-title-medium-font-family: "Roboto", Helvetica;
+  --m3-title-medium-font-size: 16px;
+  --m3-title-medium-font-style: normal;
+  --m3-title-medium-font-weight: 500;
+  --m3-title-medium-letter-spacing: 0.15000000596046448px;
+  --m3-title-medium-line-height: 24px;
+  --shape-corner-full: 1000px;
+}
+
+/*
+
+To enable a theme in your HTML, simply add one of the following data attributes to an HTML element, like so:
+
+<body data-m3-mode="light">
+    <!-- the rest of your content -->
+</body>
+
+You can apply the theme on any DOM node, not just the `body`
+
+*/
+
+[data-m3-mode="light"] {
+  --m3-schemes-on-surface: rgba(29, 27, 32, 1);
+  --m3-schemes-on-surface-variant: rgba(73, 69, 79, 1);
+  --m3-schemes-outline-variant: rgba(202, 196, 208, 1);
+  --m3-schemes-primary: rgba(101, 85, 143, 1);
+  --m3-schemes-surface: rgba(254, 247, 255, 1);
+  --m3-schemes-surface-container-highest: rgba(230, 224, 233, 1);
+  --m3-schemes-surface-container-lowest: rgba(255, 255, 255, 1);
+  --m3-schemes-tertiary-container: rgba(255, 216, 228, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(255, 255, 255, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(255, 255, 255, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(29, 25, 43, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(29, 27, 32, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(29, 27, 32, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(73, 69, 79, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(73, 69, 79, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(49, 17, 29, 0.08);
+}
+
+[data-m3-mode="light-high-contrast"] {
+  --m3-schemes-on-surface: rgba(0, 0, 0, 1);
+  --m3-schemes-on-surface-variant: rgba(37, 35, 43, 1);
+  --m3-schemes-outline-variant: rgba(69, 65, 74, 1);
+  --m3-schemes-primary: rgba(39, 23, 78, 1);
+  --m3-schemes-surface: rgba(253, 247, 255, 1);
+  --m3-schemes-surface-container-highest: rgba(230, 224, 233, 1);
+  --m3-schemes-surface-container-lowest: rgba(255, 255, 255, 1);
+  --m3-schemes-tertiary-container: rgba(107, 47, 69, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(255, 255, 255, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(255, 255, 255, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(255, 255, 255, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(0, 0, 0, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(0, 0, 0, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(37, 35, 43, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(37, 35, 43, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(255, 255, 255, 0.08);
+}
+
+[data-m3-mode="light-medium-contrast"] {
+  --m3-schemes-on-surface: rgba(29, 27, 32, 1);
+  --m3-schemes-on-surface-variant: rgba(69, 65, 74, 1);
+  --m3-schemes-outline-variant: rgba(125, 121, 131, 1);
+  --m3-schemes-primary: rgba(73, 57, 113, 1);
+  --m3-schemes-surface: rgba(253, 247, 255, 1);
+  --m3-schemes-surface-container-highest: rgba(230, 224, 233, 1);
+  --m3-schemes-surface-container-lowest: rgba(255, 255, 255, 1);
+  --m3-schemes-tertiary-container: rgba(165, 95, 119, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(255, 255, 255, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(255, 255, 255, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(255, 255, 255, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(29, 27, 32, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(29, 27, 32, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(69, 65, 74, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(69, 65, 74, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(255, 255, 255, 0.08);
+}
+
+[data-m3-mode="dark"] {
+  --m3-schemes-on-surface: rgba(230, 224, 233, 1);
+  --m3-schemes-on-surface-variant: rgba(202, 196, 208, 1);
+  --m3-schemes-outline-variant: rgba(73, 69, 79, 1);
+  --m3-schemes-primary: rgba(208, 188, 254, 1);
+  --m3-schemes-surface: rgba(20, 18, 24, 1);
+  --m3-schemes-surface-container-highest: rgba(54, 52, 59, 1);
+  --m3-schemes-surface-container-lowest: rgba(15, 13, 19, 1);
+  --m3-schemes-tertiary-container: rgba(99, 59, 72, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(56, 30, 114, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(56, 30, 114, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(232, 222, 248, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(230, 224, 233, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(230, 224, 233, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(202, 196, 208, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(202, 196, 208, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(255, 216, 228, 0.08);
+}
+
+[data-m3-mode="dark-high-contrast"] {
+  --m3-schemes-on-surface: rgba(255, 255, 255, 1);
+  --m3-schemes-on-surface-variant: rgba(255, 249, 255, 1);
+  --m3-schemes-outline-variant: rgba(206, 200, 212, 1);
+  --m3-schemes-primary: rgba(255, 249, 255, 1);
+  --m3-schemes-surface: rgba(20, 18, 24, 1);
+  --m3-schemes-surface-container-highest: rgba(54, 52, 58, 1);
+  --m3-schemes-surface-container-lowest: rgba(15, 13, 19, 1);
+  --m3-schemes-tertiary-container: rgba(255, 183, 205, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(0, 0, 0, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(0, 0, 0, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(0, 0, 0, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(255, 255, 255, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(255, 255, 255, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(255, 249, 255, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(255, 249, 255, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(0, 0, 0, 0.08);
+}
+
+[data-m3-mode="dark-medium-contrast"] {
+  --m3-schemes-on-surface: rgba(255, 249, 255, 1);
+  --m3-schemes-on-surface-variant: rgba(206, 200, 212, 1);
+  --m3-schemes-outline-variant: rgba(134, 129, 139, 1);
+  --m3-schemes-primary: rgba(211, 193, 255, 1);
+  --m3-schemes-surface: rgba(20, 18, 24, 1);
+  --m3-schemes-surface-container-highest: rgba(54, 52, 58, 1);
+  --m3-schemes-surface-container-lowest: rgba(15, 13, 19, 1);
+  --m3-schemes-tertiary-container: rgba(197, 123, 147, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(27, 9, 66, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(27, 9, 66, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(0, 0, 0, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(255, 249, 255, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(255, 249, 255, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(206, 200, 212, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(206, 200, 212, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(0, 0, 0, 0.08);
+}
+
+[data-m3-mode="monochrome-light"] {
+  --m3-schemes-on-surface: rgba(27, 27, 27, 1);
+  --m3-schemes-on-surface-variant: rgba(71, 71, 71, 1);
+  --m3-schemes-outline-variant: rgba(198, 198, 198, 1);
+  --m3-schemes-primary: rgba(0, 0, 0, 1);
+  --m3-schemes-surface: rgba(249, 249, 249, 1);
+  --m3-schemes-surface-container-highest: rgba(226, 226, 226, 1);
+  --m3-schemes-surface-container-lowest: rgba(255, 255, 255, 1);
+  --m3-schemes-tertiary-container: rgba(116, 116, 116, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(226, 226, 226, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(226, 226, 226, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(27, 27, 27, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(27, 27, 27, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(27, 27, 27, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(71, 71, 71, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(71, 71, 71, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(255, 255, 255, 0.08);
+}
+
+[data-m3-mode="monochrome-dark"] {
+  --m3-schemes-on-surface: rgba(226, 226, 226, 1);
+  --m3-schemes-on-surface-variant: rgba(198, 198, 198, 1);
+  --m3-schemes-outline-variant: rgba(71, 71, 71, 1);
+  --m3-schemes-primary: rgba(255, 255, 255, 1);
+  --m3-schemes-surface: rgba(19, 19, 19, 1);
+  --m3-schemes-surface-container-highest: rgba(53, 53, 53, 1);
+  --m3-schemes-surface-container-lowest: rgba(14, 14, 14, 1);
+  --m3-schemes-tertiary-container: rgba(145, 145, 145, 1);
+  --m3-state-layers-on-primary-opacity-08: rgba(26, 28, 28, 0.08);
+  --m3-state-layers-on-primary-opacity-12: rgba(26, 28, 28, 0.12);
+  --m3-state-layers-on-secondary-container-opacity-12: rgba(226, 226, 226, 0.12);
+  --m3-state-layers-on-surface-opacity-08: rgba(226, 226, 226, 0.08);
+  --m3-state-layers-on-surface-opacity-12: rgba(226, 226, 226, 0.12);
+  --m3-state-layers-on-surface-variant-opacity-08: rgba(198, 198, 198, 0.08);
+  --m3-state-layers-on-surface-variant-opacity-12: rgba(198, 198, 198, 0.12);
+  --m3-state-layers-on-tertiary-container-opacity-08: rgba(0, 0, 0, 0.08);
+}
+
