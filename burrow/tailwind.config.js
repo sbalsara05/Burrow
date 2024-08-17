@@ -23,6 +23,10 @@ const {nextui} = require("@nextui-org/theme");
                     800: "#f46147",
                 },
             },
+            width : {
+                "navbar" : 0.1,
+                "main" : 0.9
+            }
         },
         plugins: [nextui()],
     };

@@ -117,7 +117,7 @@ const Neighborhoods = () => {
     })
 
     return (
-        <div className="flex ml-8 mr-36 my-6 overflow-x-auto">
+        <div className="flex mx-8 my-6 w-full overflow-x-auto">
             {cards}
         </div>
     )
@@ -125,22 +125,63 @@ const Neighborhoods = () => {
 
 const MainPage = () => {
     return (
-        <div className="flex flex-col h-screen w-full">
+        <div className="flex flex-col h-screen w-[94%]">
             <TopContainer />
             <Header />
             <SectionTitle text="Neighborhoods" />
             <Neighborhoods />
+            <SectionTitle text="Just In" />
+            <JustInSection/>
         </div>
     )
 }
 
 const HomePage = () => {
     return (
-        <main className="flex bg-white h-screen w-full">
+        <main className="flex bg-white h-screen w-screen">
             <Navbar />
             <MainPage />
         </main>
     )
 }
+
+const JustInCard =  ({JustIn, index}) =>{
+        return (
+            <div key={index} className="flex w-1/2 ">
+                <img src={JustIn.imageUrl} className="max-w-none rounded-mb" alt = "Just In 1"></img>
+                <p className="text-xl w-fit mb-4">{JustIn.name}</p>
+                {/*<p className="text-xl w-fit mb-4">{neighborhood.name}</p>*/}
+
+            </div>
+        )
+
+};
+
+
+const JustInSection = () => {
+    const JustInListings = [
+        {
+            name: "Lightview",
+            imageUrl : "/fenway.jpeg"
+        }
+    ]
+
+    const cards = [];
+
+
+
+    JustInListings.forEach((n, i) => {
+        cards.push(<JustInCard JustIn={n} index={i}/>)
+    })
+
+
+    return (
+        <div className = "w-full mx-8 mt-3">
+            {cards}
+        </div>
+    )
+}
+
+
 
 export default HomePage
