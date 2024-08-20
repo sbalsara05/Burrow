@@ -33,10 +33,10 @@ const Header = () => {
 
 const NeighborhoodCard = ({neighborhood, index}) => {
     return (
-        <div key={index} className="flex flex-col mr-6 items-center inline">
-            <img src={neighborhood.imageUrl} className="max-w-none w-[128px] h-[128px] rounded-full mb-2"></img>
+        <button key={index} className="flex flex-col mr-6 items-center inline">
+            <img src={neighborhood.imageUrl} className="max-w-none w-[108px] h-[108px] rounded-full mb-2"></img>
             <p className="text-xl w-fit mb-4">{neighborhood.name}</p>
-        </div>
+        </button>
     )
 }
 
@@ -47,36 +47,36 @@ const Neighborhoods = () => {
             imageUrl: "/fenway.jpeg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "Back Bay",
+            imageUrl: "/back_bay.jpg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "Roxbury",
+            imageUrl: "/Roxbury_mural.jpg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "North End",
+            imageUrl: "/NorthEnd2.jpg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "South End",
+            imageUrl: "/South_end.jpg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "West End",
+            imageUrl: "/TD_garden.jpg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "Chinatown",
+            imageUrl: "/Chinatown_gate.jpeg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "Seaport",
+            imageUrl: "/Seaport.jpeg",
         },
         {
-            name: "Fenway",
-            imageUrl: "/fenway.jpeg",
+            name: "Cambridge",
+            imageUrl: "/Cambridge.jpeg",
         },
         {
             name: "Fenway",
@@ -145,26 +145,38 @@ const HomePage = () => {
     )
 }
 
-const JustInCard =  ({JustIn, index}) =>{
-        return (
-            <div key={index} className="flex w-1/2 ">
-                <img src={JustIn.imageUrl} className="max-w-none rounded-mb" alt = "Just In 1"></img>
-                <p className="text-xl w-fit mb-4">{JustIn.name}</p>
-                {/*<p className="text-xl w-fit mb-4">{neighborhood.name}</p>*/}
-
-            </div>
-        )
-
+const JustInCard = ({ JustIn, index }) => {
+    return (
+        <div key={index} className="flex flex-col w-1/2 pl-0 pr-4 ">
+            <img
+                src={JustIn.imageUrl}
+                className="w-[120%] h-64 object-cover rounded-lg mb-3 max-w-md"
+                alt={JustIn.name}
+            />
+            <div className="text-lg font-semibold">{JustIn.name}</div>
+            <div className="text-gray-500 text-sm">{JustIn.neighborhood}</div>
+            <div className="text-sm">{JustIn.price} Rent • {JustIn.date}</div>
+        </div>
+    );
 };
-
 
 const JustInSection = () => {
     const JustInListings = [
         {
             name: "Lightview",
-            imageUrl : "/fenway.jpeg"
+            neighborhood: "Roxbury",
+            price: "$1900-$2300",
+            date: "9/1/2024",
+            imageUrl: "/fenway.jpeg"
+        },
+        {
+            name: "Garrison Square",
+            neighborhood: "Back Bay",
+            price: "$3700-$6100",
+            date: "9/6/2024",
+            imageUrl: "/Garrison_Square.jpeg"
         }
-    ]
+    ];
 
     const cards = [];
 
@@ -176,11 +188,15 @@ const JustInSection = () => {
 
 
     return (
-        <div className = "w-full mx-8 mt-3">
-            {cards}
+        <div className="w-full p-8">
+            <div className="flex space-x-4">
+                {JustInListings.map((n, i) => (
+                    <JustInCard JustIn={n} index={i} key={i} />
+                ))}
+            </div>
         </div>
-    )
-}
+    );
+};
 
 
 
