@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../components/Navbar.jsx'
 import SectionTitle from '../components/SectionTitle.jsx'
 
+
 const TopContainer = () => {
     return (
         <div className="flex w-full h-24">
