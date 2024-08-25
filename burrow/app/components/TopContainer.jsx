@@ -2,7 +2,7 @@ import React from 'react';
 
 const TopContainer = () => {
     return (
-        <div className="flex w-full h-24">
+        <div className="flex w-full my-4">
             <button className="flex-none flex ml-8 items-center">
                 <img src="/logo.png" style={{ height: "4rem", width: "4rem" }}></img>
                 <img src="/textlogo.png" style={{ height: "2rem", width: "12rem", paddingLeft: "1rem" }}></img>

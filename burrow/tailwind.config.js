@@ -20,6 +20,7 @@ const {nextui} = require("@nextui-org/theme");
                 "clay": {
                     100: "#ffe6e2",
                     400: "#ffcfc7",
+                    700: "#e09689",
                     800: "#f46147",
                 },
             },
