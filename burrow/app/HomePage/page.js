@@ -35,7 +35,7 @@ const Header = () => {
 const NeighborhoodCard = ({neighborhood, index}) => {
     return (
         <button key={index} className="flex flex-col mr-6 items-center inline">
-            <img src={neighborhood.imageUrl} className="max-w-none w-[128px] h-[128px] rounded-full mb-2"></img>
+            <img src={neighborhood.imageUrl} className="max-w-none max-h-none w-[128px] h-[128px] rounded-full mb-2"></img>
             <p className="text-xl w-fit mb-4">{neighborhood.name}</p>
         </button>
     )
