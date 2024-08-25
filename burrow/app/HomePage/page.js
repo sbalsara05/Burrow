@@ -5,7 +5,7 @@ import SectionTitle from '../components/SectionTitle.jsx'
 
 const TopContainer = () => {
     return (
-        <div className="flex w-full h-24">
+        <div className="flex w-full h-24 mt-4">
             <button className="flex-none flex ml-8 items-center">
                 <img src="/logo.png" style={{ height: "4rem", width: "4rem" }}></img>
                 <img src="/textlogo.png" style={{ height: "2rem", width: "12rem", paddingLeft: "1rem" }}></img>
@@ -35,7 +35,7 @@ const Header = () => {
 const NeighborhoodCard = ({neighborhood, index}) => {
     return (
         <button key={index} className="flex flex-col mr-6 items-center inline">
-            <img src={neighborhood.imageUrl} className="max-w-none w-[108px] h-[108px] rounded-full mb-2"></img>
+            <img src={neighborhood.imageUrl} className="max-w-none w-[128px] h-[128px] rounded-full mb-2"></img>
             <p className="text-xl w-fit mb-4">{neighborhood.name}</p>
         </button>
     )
@@ -118,7 +118,7 @@ const Neighborhoods = () => {
     })
 
     return (
-        <div className="flex mx-8 my-6 w-full overflow-x-auto">
+        <div className="flex mx-8 mt-6 w-full overflow-x-auto">
             {cards}
         </div>
     )
@@ -176,7 +176,15 @@ const JustInSection = () => {
             price: "$3700-$6100",
             date: "9/6/2024",
             imageUrl: "/Garrison_Square.jpeg"
+        },
+        {
+            name: "12 Commonwealth",
+            neighborhood: "Back Bay",
+            price : "$2995-$4325",
+            date: "9/2/2024",
+            imageUrl: "/12Commonwealth.webp"
         }
+
     ];
 
     const cards = [];

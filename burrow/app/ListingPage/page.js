@@ -38,7 +38,7 @@ const MainListingPage = () => {
             price: "$3,710 / mo",
             utilities: "Utilities included",
             nearby: "Near Northeastern University",
-            lease: "One Year Lease Starting Sept. 28, 2024..."
+            lease: "One Year Lease Starting Sept. 28, 2024"
         },
         {
             imageUrl: "/back_bay.jpg",
@@ -49,7 +49,7 @@ const MainListingPage = () => {
             price: "$2,350+ / mo",
             utilities: "Utilities included",
             nearby: "Near Northeastern University and Berklee",
-            lease: "One Year Lease..."
+            lease: "One Year Lease"
         }
     ];
 
