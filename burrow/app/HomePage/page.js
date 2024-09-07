@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import Navbar from '../components/Navbar.jsx'
 import SectionTitle from '../components/SectionTitle.jsx'
 import TopContainer from '../components/TopContainer.jsx'
+
 
 const Header = () => {
     return (
@@ -182,3 +183,4 @@ const JustInSection = () => {
 
 
 export default HomePage
+
