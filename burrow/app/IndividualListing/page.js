@@ -95,34 +95,65 @@ const MainImage = ({ ImageUrl }) => {
 };
 
 // Display unit information (bedrooms, bathrooms, sqft, amenities)
+// Updated Unit Info component
 const UnitInfo = ({ apartmentDetails }) => {
   return (
     <div className="border-t border-gray-300 pt-4">
       <h2 className="text-2xl font-semibold mb-4">Unit Info</h2>
-      <div className="flex flex-wrap justify-between">
-        <div>
-          <p className="text-gray-700">Bedrooms: {apartmentDetails.bedrooms}</p>
-          <p className="text-gray-700">Bathrooms: {apartmentDetails.bathrooms}</p>
-          <p className="text-gray-700">Sqft: {apartmentDetails.sqft} sqft</p>
+      <div className="grid grid-cols-2 gap-6">
+        <div className="space-y-2">
+          <InfoItem icon="/icons/bed.png" text={`${apartmentDetails.bedrooms} Bed`} />
+          <InfoItem icon="/icons/bath.png" text={`${apartmentDetails.bathrooms} Bath`} />
+          <InfoItem icon="/icons/square.svg" text={`${apartmentDetails.sqft} sqft`} />
+        </div>
+        <div className="space-y-2">
+          <InfoItem icon="/icons/clock.svg" text={apartmentDetails.lease} />
+          <InfoItem icon="/icons/zap.svg" text={apartmentDetails.utilities} />
         </div>
       </div>
     </div>
   );
 };
 
-const Amenities = ({ apartmentDetails }) => {
-    return (
-        <div>
-            <h3 className="text-xl font-medium mb-1">Amenities</h3>
-            <ul className="list-none">
-                {apartmentDetails.amenities.map((amenity, index) => (
-                    <li key={index} className="text-gray-600 mb-1">{amenity}</li>
-                ))}
-            </ul>
-        </div>
-    )
 
-}
+// Updated Amenities component
+const Amenities = ({ apartmentDetails }) => {
+  return (
+    <div className="mt-6">
+      <h3 className="text-xl font-semibold mb-4">Unit Amenities</h3>
+      <div className="flex flex-wrap gap-2">
+        {apartmentDetails.amenities.map((amenity, index) => (
+          <AmenityTag
+            key={index}
+            text={amenity}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Helper Components
+const InfoItem = ({ icon, text }) => (
+  <div className="flex items-center space-x-2">
+    <img
+      src={icon}
+      alt="Icon"
+      width={18}
+      height={18}
+      className="inline-block"
+    />
+    <span className="text-sm">{text}</span>
+  </div>
+);
+
+const AmenityTag = ({ text }) => (
+  <span className="px-0 py-1 rounded-full text-sm font-medium bg-indigo-100 text-indigo-800">
+    {text}
+  </span>
+);
+
+
 
 // Main page rendering the Navbar and Apartment details
 const IndividualListings = () => {
