@@ -3,6 +3,7 @@ import React from 'react';
 import Navbar from '../components/Navbar'; // Import your custom NavBar
 import SectionTitle from "../components/SectionTitle"; // Import Section Title Component
 import Image from 'next/image'; // Use Next.js Image optimization for images
+import TopContainer from '../components/TopContainer';
 
 const ApartmentDetailPage = () => {
   const apartmentDetails = {
@@ -21,22 +22,23 @@ const ApartmentDetailPage = () => {
       'Street Parking', 'Rooftop Terrace', 'Pet Friendly'
     ],
     images: [
-      '/fenway.jpeg', '/fenway.jpeg', '/fenway.jpeg', '/fenway.jpeg', '/fenway.jpeg'
+      '/ChurchParkMain.webp', '/ChurchPark2.webp', '/ChurchPark3.webp', '/ChurchPark4.webp', '/ChurchPark5.webp'
     ]
   };
 
   return (
     <div className="w-[94%] flex flex-col px-6 lg:px-24 py-8 overflow-y-scroll">
+        <TopContainer/>
         <ImageContainer images={apartmentDetails.images} />
-      <TopContainer apartmentDetails={apartmentDetails} />
-
+      <TopContainerListing apartmentDetails={apartmentDetails} />
       <UnitInfo apartmentDetails={apartmentDetails} />
+        <Amenities apartmentDetails={apartmentDetails}/>
     </div>
   );
 };
 
 // Top container with title, address, and pricing
-const TopContainer = ({ apartmentDetails }) => {
+const TopContainerListing = ({ apartmentDetails }) => {
   return (
     <div className="mb-4">
       <h1 className="text-3xl font-semibold mb-2">{apartmentDetails.title}</h1>
@@ -53,7 +55,7 @@ const ImageContainer = ({images}) => {
     const mainImage = images[0];
     const galleryImage = images.slice(1, 5);
     return (
-        <div className="w-full grid grid-cols-2 gap-4">
+        <div className="w-full grid grid-cols-2 gap-4 pb-4">
             <MainImage ImageUrl={mainImage}/>
             <ImageGallery images={galleryImage}/>
 
@@ -79,17 +81,18 @@ const ImageGallery = ({ images }) => {
   );
 };
 
-const MainImage = ({ImageUrl}) => {
-    return (
-        <div className="w-1/2 h-full">
-            <img
-            src={ImageUrl}
-            alt="Listing Image Large"
-            className="object-cover rounded-lg w-full h-full"/>
 
-        </div>
-    )
-}
+const MainImage = ({ ImageUrl }) => {
+  return (
+    <div className="relative w-1/2 aspect-[3.41/3] ">
+      <img
+        src={ImageUrl}
+        alt="Listing Image Large"
+        className="absolute inset-0 w-full h-full object-cover rounded-lg"
+      />
+    </div>
+  );
+};
 
 // Display unit information (bedrooms, bathrooms, sqft, amenities)
 const UnitInfo = ({ apartmentDetails }) => {
@@ -102,27 +105,34 @@ const UnitInfo = ({ apartmentDetails }) => {
           <p className="text-gray-700">Bathrooms: {apartmentDetails.bathrooms}</p>
           <p className="text-gray-700">Sqft: {apartmentDetails.sqft} sqft</p>
         </div>
-        <div>
-          <h3 className="text-xl font-medium mb-2">Amenities</h3>
-          <ul className="list-none">
-            {apartmentDetails.amenities.map((amenity, index) => (
-              <li key={index} className="text-gray-600 mb-1">{amenity}</li>
-            ))}
-          </ul>
-        </div>
       </div>
     </div>
   );
 };
 
+const Amenities = ({ apartmentDetails }) => {
+    return (
+        <div>
+            <h3 className="text-xl font-medium mb-1">Amenities</h3>
+            <ul className="list-none">
+                {apartmentDetails.amenities.map((amenity, index) => (
+                    <li key={index} className="text-gray-600 mb-1">{amenity}</li>
+                ))}
+            </ul>
+        </div>
+    )
+
+}
+
 // Main page rendering the Navbar and Apartment details
 const IndividualListings = () => {
-  return (
-    <div className="w-full flex h-screen bg-gray-100">
-      <Navbar />
-      <ApartmentDetailPage />
-    </div>
-  );
+    return (
+        <div className="w-full flex h-screen bg-gray-100">
+            {/*<TopContainer/>*/}
+            <Navbar/>
+            <ApartmentDetailPage/>
+        </div>
+    );
 };
 
 export default IndividualListings;
